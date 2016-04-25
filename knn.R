@@ -3,8 +3,7 @@
 ###################
 
 source("util.R")
-library("class") #for use with k nearest neighbors. 
-library("permute")
+library("FNN")
 
 shuffled <- trump_nums[sample.int(nrow(trump_nums)),]
 train <- shuffled[1:1500, ]
