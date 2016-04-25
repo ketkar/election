@@ -5,7 +5,6 @@
 # Use source("util.R") to import these methods. 
 
 library("dplyr")
-library("class") #for use with k nearest neighbors. 
 
 county_features <- read.csv("data/county_facts_dictionary.csv")
 county_data <- read.csv("data/county_facts.csv")
