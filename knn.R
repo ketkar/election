@@ -3,6 +3,7 @@
 ###################
 
 source("util.R")
+install.packages("FNN")
 library("FNN")
 
 shuffled <- trump_nums[sample.int(nrow(trump_nums)),]
