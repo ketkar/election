@@ -25,7 +25,7 @@ knn <- function(cand, data, num = 5){
 #Packaging it up 
 knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=20, features = c(30, 10, 13, 11, 16)){
   #Returns proportion of KNN with that label for that state (predictions)
-
+  ##USAGE EXAMPLE## : test <- knn_pred(trump_nums, trump_wins, trump, k=20)
   cand_cut <- cand_nums[features]
   cand_idaho_train <- cand_cut[which(cand$state == state),]
   cand_idaho_labels <- cand_wins[which(cand$state == state)]
@@ -45,4 +45,3 @@ knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=20, features
   return(df)
 }
 
-test <- knn_pred(trump_nums, trump_wins, trump, k=20)
