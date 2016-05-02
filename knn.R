@@ -26,4 +26,13 @@ knn <- function(cand, data, num = 5){
   return(sort.int(distances, index.return = T)$ix[1:num])
 }
 
+#t <- knn(trump_nums[1, ], trump_nums, 10)
+
+
+#Cleaning some more, with labels for win/losses relative to each other. 
+#Assumes two people races 
+trump_wins <- as.numeric(trump_nums$votes - cruz_nums$votes > 0)
+sanders_wins <- as.numeric(sanders_nums$votes - clinton_nums$votes > 0)
+
+
 t <- knn(trump_nums[1, ], trump_nums, 10)
