@@ -38,7 +38,7 @@ knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=15, features
   }
   correct <- 1 - sum(abs(cand_idaho_labels - as.numeric(cand_confidence > 0.5)))/length(cand_confidence)
   print(paste("Correct rate is,", correct))
-  df <- data.frame(indexes = which(cand$state != state)[1:length(cand_confidence)], confidence = cand_confidence) 
+  df <- data.frame(indexes = which(cand$state == state)[1:length(cand_confidence)], confidence = cand_confidence) 
   return(df)
 }
 
