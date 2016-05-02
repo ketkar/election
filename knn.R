@@ -22,18 +22,6 @@ knn <- function(cand, data, num = 5){
   return(sort.int(distances, index.return = T)$ix[1:num])
 }
 
-#Time for Cross validation! 
-#Partitioning data 
-shuffled_indexes <- sample.int(nrow(trump_nums))
-shuffled <- trump_nums[shuffled_indexes,]
-train <- shuffled[1:1500, ]
-train_indexes <- shuffled_indexes[1:1500]
-test_indexes <- shuffled_indexes[1501:length(shuffled_indexes)]
-test <- shuffled[1501:nrow(shuffled), ]
-test_labels <- trump_wins[test_indexes]
-train_labels <- trump_wins[train_indexes]
-
-
 #Packaging it up 
 knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=15, features = c(30, 10, 13, 11, 16)){
   #Returns proportion of KNN with that label for that state (predictions)
@@ -45,7 +33,7 @@ knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=15, features
   cand_train_labels <- cand_wins[which(cand$state != state)]
   
   cand_confidence <- numeric()
-  for (i in 1:nrow(cand_idaho_train[1:2])){
+  for (i in 1:nrow(cand_idaho_train)){
     cand_confidence[[i]] <- mean(cand_train_labels[knn(cand_idaho_train[i, ], cand_train, k)[1:k]])
   }
   correct <- 1 - sum(abs(cand_idaho_labels - as.numeric(cand_confidence > 0.5)))/length(cand_confidence)
