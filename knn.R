@@ -45,5 +45,5 @@ for (i in 1:nrow(trump_idaho_train)){
   trump_confidence[[i]] <- mean(trump_train_labels[knn(trump_idaho_train[i, ], trump_train, 15)[2:15]])
 }
 
-correct <- 1 - sum(trump_idaho_labels - as.numeric(trump_confidence > 0.5))/length(trump_confidence)
+correct <- 1 - sum(abs(trump_idaho_labels - as.numeric(trump_confidence > 0.5)))/length(trump_confidence)
 
