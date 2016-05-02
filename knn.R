@@ -45,6 +45,8 @@ train_labels <- trump_wins[train_indexes]
 #Testing 
 trump_cutdown <- select()
 trump_confidence <- numeric()
-for (i in 1:nrow(trump_nums[1:65,])){
-  out[[i]] <- mean(trump_wins[knn(trump_nums[i, ], trump_nums[66:,], 10)[2:10]])
+for (i in 1:nrow(trump_nums[1:10,])){
+  trump_confidence[[i]] <- mean(trump_wins[knn(trump_nums[i, ], trump_nums[66:nrow(trump_nums),], 10)[2:10]])
 }
+
+correct <- 1 - sum(trump_wins[1:length(trump_confidence)] - as.numeric(trump_confidence > 0.5))/length(trump_confidence)
