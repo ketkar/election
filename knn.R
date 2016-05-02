@@ -3,7 +3,6 @@
 ###################
 
 source("util.R")
-library("FNN")
 
 #Cleaning some more, with labels for win/losses relative to each other. 
 #Assumes two people races 
@@ -34,16 +33,26 @@ test <- shuffled[1501:nrow(shuffled), ]
 test_labels <- trump_wins[test_indexes]
 train_labels <- trump_wins[train_indexes]
 
-#Testing 
-trump_idaho_train <- trump_nums[which(trump$state == "Idaho"),]
-trump_idaho_labels <- trump_wins[which(trump$state == "Idaho")]
-trump_train <- trump_nums[which(trump$state != "Idaho"), ]
-trump_train_labels <- trump_wins[which(trump$state != "Idaho")]
 
-trump_confidence <- numeric()
-for (i in 1:nrow(trump_idaho_train)){
-  trump_confidence[[i]] <- mean(trump_train_labels[knn(trump_idaho_train[i, ], trump_train, 15)[2:15]])
+#Packaging it up 
+knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=15, features = c(30, 10, 13, 11, 16)){
+  #Returns proportion of KNN with that label for that state (predictions)
+
+  cand_cut <- cand_nums[features]
+  cand_idaho_train <- cand_cut[which(cand$state == state),]
+  cand_idaho_labels <- cand_wins[which(cand$state == state)]
+  cand_train <- cand_cut[which(cand$state != state), ]
+  cand_train_labels <- cand_wins[which(cand$state != state)]
+  
+  cand_confidence <- numeric()
+  for (i in 1:nrow(cand_idaho_train[1:2])){
+    cand_confidence[[i]] <- mean(cand_train_labels[knn(cand_idaho_train[i, ], cand_train, k)[1:k]])
+  }
+  correct <- 1 - sum(abs(cand_idaho_labels - as.numeric(cand_confidence > 0.5)))/length(cand_confidence)
+  print(paste("Correct rate is,", correct))
+  df <- data.frame(indexes = which(cand$state != state)[1:length(cand_confidence)], confidence = cand_confidence) 
+  return(df)
 }
 
-correct <- 1 - sum(abs(trump_idaho_labels - as.numeric(trump_confidence > 0.5)))/length(trump_confidence)
+test <- knn_pred(trump_nums, trump_wins, trump)
 
