@@ -22,12 +22,38 @@ map_data <- function(data, color1, color2, state="ohio") {
 library(choroplethr)
 library(mapproj)
 
-trump_confidence <- knn_pred(trump_nums, trump_wins, trump, k=20)
+source("knn.R")
+map_data <- function(cand_nums, cand_wins, cand, opponent, k = 20, state = "idaho"){
+  
+  State <- paste(toupper(substr(state, 1, 1)), substr(state, 2, nchar(state)), sep = "")
 
-trump_confidence$value = trump_confidence$confidence
-trump_confidence$region <- trump[which(trump$state == "Idaho"),]$fips
-county_choropleth(trump_confidence, 
-                  state_zoom = "idaho",
-                  title      = "Trump Win Probability",
-                  num_colors = 9, color = "red")
+  cand_confidence <- knn_pred(cand_nums, cand_wins, cand, State, k=20)
+  saveRDS(cand_confidence, paste(state, ".rds", sep=""))
+  #cand_confidence <- readRDS("debug4.rds")
+  
+  cand_confidence$value = cand_confidence$confidence
+  cand_confidence$region <- cand[which(cand$state == State),]$fips
+  print(State)
+  
+  
+  cand_idaho_labels <- as.numeric(cand$votes - opponent$votes > 0)[which(cand$state == State)]
+  true_values <- data.frame(value = cand_idaho_labels, region = cand_confidence$region)
+  a <- county_choropleth(cand_confidence, 
+                    state_zoom = state,
+                    title      = "Predicted Election Results",
+                    legend = c("Cand Win (1), Opponent Win (0)"),
+                    num_colors = 1)
+  print(true_values$value)
+  print(cut2(true_values$value, g = 1))
+  b <- county_choropleth(true_values, 
+                    state_zoom = state,
+                    title      = "Actual Election Results",
+                    legend = c("Cand Win (1), Opponent Win (0)"),
+                    num_colors = 1)
+
+  plot(a) 
+  plot(b)
+}
+map_data(sanders_nums, sanders_wins, sanders, clinton,  k = 20, state = "georgia")
+
 

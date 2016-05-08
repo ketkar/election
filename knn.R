@@ -33,6 +33,7 @@ knn_pred <- function(cand_nums, cand_wins, cand, state = "Idaho", k=20, features
   cand_train_labels <- cand_wins[which(cand$state != state)]
   
   cand_confidence <- numeric()
+  
   for (i in 1:nrow(cand_idaho_train)){
     cand_confidence[[i]] <- mean(cand_train_labels[knn(cand_idaho_train[i, ], cand_train, k)[1:k]])
   }
