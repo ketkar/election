@@ -1,7 +1,7 @@
 % Search for all the places that say "PUT SOMETHING HERE".
 
 \documentclass[11pt]{article}
-\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate, caption, subcaption}
 
 \def\Name{Aniket Ketkar, Tanay Lathia, Eric Priest, Steve Wang}  % Your name
 \def\SID{24795502}  % Your student ID number
@@ -10,7 +10,7 @@
 \def\Session{Fall 2015}
 
 
-\title{Statistics 133 - Final Project - "Team Feelin' the Bern"}
+\title{Statistics 133 - Final Project - ``Team Feelin' the Bern"}
 \author{\Name}
 \markboth{Stat 133--\Session\  Final Project \Name}{ \Name}
 \pagestyle{myheadings}
@@ -32,14 +32,49 @@
 
 \section*{Abstract}
 
+\newpage
 
 \section*{Background}
 
+\newpage
+
 \section*{Questions for Analysis}
+
+\newpage
 
 \section*{Methods}
 
+\newpage
+
 \section*{Exploratory Analysis}
+Before we jumped into performing machine learning to predict county results, we created a few visualizations to see any obvious trends in the data. The first is just a very simple pie-chart of how the race was stacking up at the time the data were collected. \\
+
+\includegraphics[scale=0.4]{../exploratory_plots/Republican_Primary.png}
+\includegraphics[scale=0.4]{../exploratory_plots/Democrat_Primary.png}
+
+These graphs show the percentage of counties won by each candidate in their respective party. These plots are a great spot to begin our exploratory analysis because firstly they provide a motivation for the analysis: Sanders and Cruz are both on the backfoot in their party races. They need to determine which voter groups they are not hitting and refocus their efforts in order to stand a chance at claiming the nominations. Furthermore, it is important to consider these charts because the skewed nature of the current state of the primaries will bias any results we generate - especially when using K Nearest Neighbors, an unsupervised learning technique. The nature of the this tool, which we will describe in greater detail in the next section, lends itself to following the bias of the data that has already been collected; so, it is important to be fully aware of the biases before extrapolating results for predictions. \\
+
+\includegraphics[scale=0.38]{../exploratory_plots/Trump_White.png}
+\includegraphics[scale=0.38]{../exploratory_plots/Cruz_White.png}\\
+\includegraphics[scale=0.38]{../exploratory_plots/Sanders_White.png}
+\includegraphics[scale=0.38]{../exploratory_plots/Clinton_White.png}\\
+
+\includegraphics[scale=0.38]{../exploratory_plots/Trump_Num_People.png}
+\includegraphics[scale=0.38]{../exploratory_plots/Cruz_Num_People.png}\\
+\includegraphics[scale=0.38]{../exploratory_plots/Sanders_Num_People.png}	
+\includegraphics[scale=0.38]{../exploratory_plots/Clinton_Num_People.png}
+
+\includegraphics[scale=0.38]{../exploratory_plots/Trump_Age.png}
+\includegraphics[scale=0.38]{../exploratory_plots/Cruz_Age.png}\\
+\includegraphics[scale=0.38]{../exploratory_plots/Sanders_Age.png}
+\includegraphics[scale=0.38]{../exploratory_plots/Clinton_Age.png}\\
+
+Despite the shortcomings of KNN, our full exploratory analysis suggested that it made the most sense for us to use in our attempt at classification. Above are a selection of the plots we generated while reviewing the dataset. In every plot, each data point represents a county. The y-axis is always the proportion of votes that the plot's candidate received. The point of interest is always the x-axis which is the feature we were examining. In order from top to bottom, the plots examine how well each candidate does with respect to: proportion of white voters, average number of people per household, and proportion of young voters. Furthermore the plots are organized such that Cruz and Trump are next to each other and Clinton and Sanders are also next to each other in each row. This is so that inter-party comparisons (which are the only valid ones we can make based on this data) are easier. Also, the proportions of voters for Cruz plus Trump add up to 1 (approximately) and the same goes for Sanders and Clinton. This is because only these four candidates got any real traction in the election and this makes our assumption that there are only four candidates in the race.\\
+
+The most compelling plot is the first one - how the proportion of votes received varies with proportion with white voters. We can see that for both Trump and Clinton if there are more than 50\% non-white voters it is very, very likely that they win the county. The county is more of a tossup for counties with more white voters, but seeing this first plot made us hopeful that we could generate a linear classifier. Using just one feature, we can predict very accuracy counties with less than 50\% white voters. However, as we explored more of the features in the data set, we found that no other demographic indicator was nearly as powerful as amount of whites. For example, with number of people per household Cruz seems to have more appeal than Trump for families however this doesn't seem to impact the Democratic race. There is also a similar trend that favors Cruz for younger voters - however it is not nearly as significant as the white voters feature. \\
+
+Because of the limited data separation that we could get from adding more features, we determined that a linear classifier would not do well. The features we had access did not provide enough resolution between certain counties. Because of these limitations, we decided that KNN would be an appropriate model that would be the easiest for us to tune to get accurate results.
+\newpage
 
 \section*{Machine Learning - K Nearest Neighbors - Equations}
 K Nearest neighbors is a nonparametric machine learning technique to find similar points in a dataset. It makes the assumption that similar points will have similar results, so point's label is predicted as the average label of its neighbors. Check out \texttt{knn.R} for the team's implementation of KNN. \\ 
@@ -82,5 +117,8 @@ The model also worked somewhat well for Republican candidates, in particular in 
 Overall, the model works well when the training data is relatively homogenous. If a candidate has clearly won similar states, the model correctly predicts that they will win future similar states. In addition, if there are clear boundaries within a state, the model will pick up on that fact. 
 \section*{Final Analysis - Answering the Questions}
 
+\newpage
+
+\section*{Code Appendix}
 
 \end{document}
