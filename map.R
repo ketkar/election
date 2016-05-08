@@ -27,7 +27,7 @@ map_data <- function(cand_nums, cand_wins, cand, opponent, k = 20, state = "idah
   
   State <- paste(toupper(substr(state, 1, 1)), substr(state, 2, nchar(state)), sep = "")
 
-  cand_confidence <- knn_pred(cand_nums, cand_wins, cand, State, k=20)
+  cand_confidence <- knn_pred(cand_nums, cand_wins, cand, State, k=k)
   saveRDS(cand_confidence, paste(state, ".rds", sep=""))
   #cand_confidence <- readRDS("debug4.rds")
   
@@ -54,6 +54,6 @@ map_data <- function(cand_nums, cand_wins, cand, opponent, k = 20, state = "idah
   plot(a) 
   plot(b)
 }
-map_data(sanders_nums, sanders_wins, sanders, clinton,  k = 20, state = "georgia")
+map_data(sanders_nums, sanders_wins, sanders, clinton,  k = 20, state = "illinois")
 
 

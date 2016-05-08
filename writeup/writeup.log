@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAY 2016 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAY 2016 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -357,27 +357,165 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./writ
-eup.aux) ) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../knn_plots/alabama_predicted.png, id=18, 562.1pt x 704.6325pt>
+File: ../knn_plots/alabama_predicted.png Graphic file (type png)
+
+<use ../knn_plots/alabama_predicted.png>
+Package pdftex.def Info: ../knn_plots/alabama_predicted.png used on input line 
+65.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/alabama_actual.png, id=20, 562.1pt x 704.6325pt>
+File: ../knn_plots/alabama_actual.png Graphic file (type png)
+
+<use ../knn_plots/alabama_actual.png>
+Package pdftex.def Info: ../knn_plots/alabama_actual.png used on input line 65.
+
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/arizona_predicted.png, id=21, 562.1pt x 704.6325pt>
+File: ../knn_plots/arizona_predicted.png Graphic file (type png)
+
+<use ../knn_plots/arizona_predicted.png>
+Package pdftex.def Info: ../knn_plots/arizona_predicted.png used on input line 
+66.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/arizona_actual.png, id=22, 562.1pt x 704.6325pt>
+File: ../knn_plots/arizona_actual.png Graphic file (type png)
+
+<use ../knn_plots/arizona_actual.png>
+Package pdftex.def Info: ../knn_plots/arizona_actual.png used on input line 66.
+
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/florida_predicted.png, id=23, 562.1pt x 704.6325pt>
+File: ../knn_plots/florida_predicted.png Graphic file (type png)
+
+<use ../knn_plots/florida_predicted.png>
+Package pdftex.def Info: ../knn_plots/florida_predicted.png used on input line 
+67.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/florida_actual.png, id=24, 562.1pt x 704.6325pt>
+File: ../knn_plots/florida_actual.png Graphic file (type png)
+
+<use ../knn_plots/florida_actual.png>
+Package pdftex.def Info: ../knn_plots/florida_actual.png used on input line 67.
+
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+File: ../knn_plots/alabama_predicted.png Graphic file (type png)
+ <use ../knn_plots/alabama_predicted.png>
+Package pdftex.def Info: ../knn_plots/alabama_predicted.png used on input line 
+68.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+File: ../knn_plots/alabama_actual.png Graphic file (type png)
+
+<use ../knn_plots/alabama_actual.png>
+Package pdftex.def Info: ../knn_plots/alabama_actual.png used on input line 68.
+
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/idaho_predicted.png, id=25, 562.1pt x 704.6325pt>
+File: ../knn_plots/idaho_predicted.png Graphic file (type png)
+
+<use ../knn_plots/idaho_predicted.png>
+Package pdftex.def Info: ../knn_plots/idaho_predicted.png used on input line 69
+.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/idaho_actual.png, id=26, 562.1pt x 704.6325pt>
+File: ../knn_plots/idaho_actual.png Graphic file (type png)
+
+<use ../knn_plots/idaho_actual.png>
+Package pdftex.def Info: ../knn_plots/idaho_actual.png used on input line 69.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+
+ []
+
+[2 <../knn_plots/alabama_predicted.png> <../knn_plots/alabama_actual.png> <../k
+nn_plots/arizona_predicted.png> <../knn_plots/arizona_actual.png>] [3 <../knn_p
+lots/florida_predicted.png> <../knn_plots/florida_actual.png>]
+<../knn_plots/illinois_predicted.png, id=40, 562.1pt x 704.6325pt>
+File: ../knn_plots/illinois_predicted.png Graphic file (type png)
+
+<use ../knn_plots/illinois_predicted.png>
+Package pdftex.def Info: ../knn_plots/illinois_predicted.png used on input line
+ 74.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/illinois_actual.png, id=41, 562.1pt x 704.6325pt>
+File: ../knn_plots/illinois_actual.png Graphic file (type png)
+
+<use ../knn_plots/illinois_actual.png>
+Package pdftex.def Info: ../knn_plots/illinois_actual.png used on input line 74
+.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/georgia_sanders_predicted.png, id=42, 562.1pt x 704.6325pt>
+File: ../knn_plots/georgia_sanders_predicted.png Graphic file (type png)
+
+<use ../knn_plots/georgia_sanders_predicted.png>
+Package pdftex.def Info: ../knn_plots/georgia_sanders_predicted.png used on inp
+ut line 75.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+<../knn_plots/georgia_sanders_actual.png, id=43, 562.1pt x 704.6325pt>
+File: ../knn_plots/georgia_sanders_actual.png Graphic file (type png)
+
+<use ../knn_plots/georgia_sanders_actual.png>
+Package pdftex.def Info: ../knn_plots/georgia_sanders_actual.png used on input 
+line 75.
+(pdftex.def)             Requested size: 224.83601pt x 281.848pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+
+ []
+
+[4 <../knn_plots/idaho_predicted.png> <../knn_plots/idaho_actual.png> <../knn_p
+lots/illinois_predicted.png> <../knn_plots/illinois_actual.png>] [5 <../knn_plo
+ts/georgia_sanders_predicted.png> <../knn_plots/georgia_sanders_actual.png>]
+(./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 3333 strings out of 493117
- 45895 string characters out of 6135433
- 105957 words of memory out of 5000000
- 6751 multiletter control sequences out of 15000+600000
- 9489 words of font info for 36 fonts, out of 8000000 for 9000
+ 3410 strings out of 493117
+ 48198 string characters out of 6135433
+ 109957 words of memory out of 5000000
+ 6809 multiletter control sequences out of 15000+600000
+ 12187 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,26p,257b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+ 37i,6n,26p,586b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
 .pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
-fb>
-Output written on writeup.pdf (1 page, 52961 bytes).
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on writeup.pdf (5 pages, 670316 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
