@@ -29,17 +29,16 @@
 
 \begin{document}
 \maketitle
-
-\section*{Abstract}
-This project involves the 2016 United States presidential primary races and the role of data in the campaign process.  The goal is to show what ways campaign teams can use election and demographic data to help them properly allocate campaign resources. We predict that through the use of linear regression, we will be able to isolate the main variables that influence voting results and use those variables to create a prediction model for future states. The prediction method we use is the K Nearest Neighbors algorithm and we believe this type of analysis would be valuable to campaign teams at all levels of United States politics.
-
+\tableofcontents
 \newpage
+\section{Abstract}
+This project involves the 2016 United States presidential primary races and the role of data in the campaign process.  The goal is to show what ways campaign teams can use election and demographic data to help them properly allocate campaign resources. We predict that through the use of linear regression, we will be able to isolate the main variables that influence voting results and use those variables to create a prediction model for future states. We built a vectorized K Nearest Neighbors (machine learning) model from scratch, running it on the chosen features in the demographic data. We conclude that regression features with KNN produce adequate results for primary voting prediction, with surprising results in homogeneous counties such as Georgia.  
 
-\section*{Background}
-For the past year, the US Presidential election has consumed the attention of the American people. While many of the publications deal with who said what, the role of data cannot be understated, as we often see polls extrapolated to predict primary results or we see actual election data made into consumer friendly visualizations. With this in mind, our group wanted to look into the different ways data could be used to predict election results and how campaign team behind the scenes could use data. Through Kaggle, we found a data set involving people’s voting patterns in the primaries by county. More specifically, for each county in each state and for each major political party, the data told us the percentage of votes and also the demographic of the people within the county, including features like percentage of each race, average number of households, and percentage of each age range. 
-\newpage
 
-\section*{Questions for Analysis}
+\section{Background}
+For the past year, the US Presidential election has consumed the attention of the American people. While many of the publications deal with who said what, the role of data cannot be understated, as we often see polls extrapolated to predict primary results or we see actual election data made into consumer friendly visualizations. With this in mind, our group wanted to look into the different ways data could be used to predict election results and how campaign team behind the scenes could use data. Through Kaggle, we found a data set involving people’s voting patterns in the primaries by county. More specifically, for each county in each state and for each major political party, the data told us the percentage of votes and also the demographic of the people within the county, including features like percentage of each race, average number of households, and percentage of each age range, among many more. The data was sourced from \texttt{https://www.kaggle.com/benhamner/2016-us-election}, compiled by Ben Hamner. See more cleaning details in the Data Analysis Methods section, and \texttt{util.R}. 
+
+\section{Questions for Analysis}
 Using this data, we set out to answer these two primary questions:
 
 \begin{enumerate}
@@ -49,17 +48,29 @@ Using this data, we set out to answer these two primary questions:
 We chose this idea over others because we wanted to see how we could apply data and the skills we learned in class to modern day relevant issues. Obviously, no one can exactly foresee the outcomes election, but we found the idea of seeing how close we could get to be enticing.
 \newpage
 
-\section*{Methods}
+\section{Data Analysis Methods}
 We obtained the data from Kaggle. The main data files that we used were the “primary\_results.csv” and the “county\_facts.csv” files. The “primary\_results.csv” file gave us data as to how each county voted, for both parties and the “county\_facts.csv” file gave us data as to the demographics of each county. 
-The first step we needed to take was to wrangle the data. The data came in the form of three ‘.csv’ files, one that had the election results for each county, one that had the demographic data for each county with the variables in codes, and one that had the key for the variables.  We decided to join the county demographic data frame with the election results data frame to create a large data table that had all of the relevant information we wanted to work with. We then created separate data frames for each candidate to get isolated results for each by creating subsets of the large data frame. This separation was helpful later when we ran linear regressions for the candidates.
+The first step we needed to take was to wrangle the data. The data came in the form of three ‘.csv’ files, one that had the election results for each county, one that had the demographic data for each county with the variables in codes, and one that had the key for the variables.  We decided to inner join the county demographic data frame with the election results data frame to create a large data table that had all of the relevant information we wanted to work with. We then created separate data frames for each candidate to get isolated results for each by creating subsets of the large data frame. This separation was helpful later when we ran linear regressions for the candidates.
 
 In order to find the answers to these questions, we needed to slim down which features of the demographics we wanted to analyze. It’d take far too much time to process each of these features so the most efficient method is to find the ones that impacted voting patterns the most. We ran linear regressions between each demographic variable and votes to see which variables correlated the most, and with this analysis we determined that racial variables and the average number of household members were the most influential factors. Once we found the main factors, we were able to make plots that depicted just how much influence those variables had. 
 
 We used K Nearest Neighbors in order to generate predictions based off a feature. KNN is explained more in depth in the next section, but its main purpose is as a classifier. For each state, our training data was every county in the United States minus that state, and we our testing data was every county within the state.
 
+\section{Technical Methods}
+\textbf{Technologies used: } 
+\begin{enumerate}
+\item \texttt{R} scripts
+\item \texttt{choroplethr}, \texttt{ggplot2}, \texttt{DataComputing} libraries
+\item Github and git, see \texttt{https://github.com/ketkar/election} for commit history
+\item \LaTeX for final writeup (see Github for code) 
+\item Object oriented programming/abstraction. 
+\item Vectorized functions (apply)
+\item Caching results using \texttt{.rds} files
+\end{enumerate}
+
 \newpage
 
-\section*{Exploratory Analysis}
+\section{Exploratory Analysis}
 Before we jumped into performing machine learning to predict county results, we created a few visualizations to see any obvious trends in the data. The first is just a very simple pie-chart of how the race was stacking up at the time the data were collected. \\
 
 \includegraphics[scale=0.4]{../exploratory_plots/Republican_Primary.png}
@@ -89,8 +100,9 @@ The most compelling plot is the first one - how the proportion of votes received
 Because of the limited data separation that we could get from adding more features, we determined that a linear classifier would not do well. The features we had access did not provide enough resolution between certain counties. Because of these limitations, we decided that KNN would be an appropriate model that would be the easiest for us to tune to get accurate results.
 \newpage
 
-\section*{Machine Learning - K Nearest Neighbors - Equations}
-K Nearest neighbors is a nonparametric machine learning technique to find similar points in a dataset. It makes the assumption that similar points will have similar results, so point's label is predicted as the average label of its neighbors. Check out \texttt{knn.R} for the team's implementation of KNN. \\ 
+\section{Machine Learning - K Nearest Neighbors}
+\subsection{KNN Equations and Algorithm}
+K Nearest neighbors is a nonparametric machine learning technique to find similar points in a dataset. It makes the assumption that similar points will have similar results, so point's label is predicted as the average label of its neighbors. Check out \texttt{knn.R} for the team's implementation of KNN. 
 KNN does not make any assumptions about the structure of the dataset, underlying trends, or high level ideas. It just finds the nearest neighbors. For large datasets, like the one in this paper, KNN must run through all of the training points before it can make a prediction. Performance is guaranteed to be linear ($O(nf)$) with the size of the training data $n$ and number of features $f$. The more features, the farther points will be in space due to the curse of dimensionality, so we had to cut down on the featureset to make predictions better. \\ 
 
 Let a single data point be $\mathbf{x_i} = (f_1, f_2, f_3...)$, in entire dataset $\mathbf{X}$. Then for training data point $\mathbf{x_j}$ for $i \neq j$, define the L2 distance metric for a single training example as $t_j = \sqrt{\Sigma(\mathbf{x_i} - \mathbf{x_j})^2}$. The training point $\mathbf{x_j}$ with minimum $t_j$ is the closest example to the desired prediction point. 
@@ -98,7 +110,7 @@ Let a single data point be $\mathbf{x_i} = (f_1, f_2, f_3...)$, in entire datase
 The algorithm is: 
 
 \begin{enumerate}
-\item For all $i \neq j$, compute $t_j$ 
+\item For all $j \neq i$, compute $t_j$ 
 \item Find $k$ smallest $t_j$ 
 \item Return average of these $k$ values. 
 \end{enumerate}
@@ -107,8 +119,8 @@ As you can see, this involves the entire training set. For state level predictio
 
 Despite the downsides, KNN performed much better than chance. Assuming two people races, a uniform assumption has expected win rate of 0.5, but every state had at least 70\% success, with some over 90%. 
 
-\section*{Trump v Cruz Plots}
-\textbf{Trump's data worked mostly well with KNN.} Below are some examples of states. The predictions are on the left, the actual results are on the right. Darker blue areas correspond to his predicted wins. \\
+\subsection{Trump v Cruz Plots}
+\textbf{Trump's data worked mostly well with KNN.} Below are some examples of states. The predictions are on the left, the actual results are on the right. Darker blue areas correspond to his predicted wins. See the Analysis section for breakdowns.  \\
 
 \includegraphics[scale=0.4]{../knn_plots/alabama_predicted.png} \includegraphics[scale=0.4]{../knn_plots/alabama_actual.png}\\
 \includegraphics[scale=0.4]{../knn_plots/arizona_predicted.png} \includegraphics[scale=0.4]{../knn_plots/arizona_actual.png}\\
@@ -117,32 +129,43 @@ Despite the downsides, KNN performed much better than chance. Assuming two peopl
 \includegraphics[scale=0.4]{../knn_plots/idaho_predicted.png} \includegraphics[scale=0.4]{../knn_plots/idaho_actual.png}\\
 
 
-\section*{Sanders v Clinton Plots}
+\subsection{Sanders v Clinton Plots}
 \textbf{The model somewhat works for Democratic candidates. } Here are the predictions for Sanders: \\
 \includegraphics[scale=0.4]{../knn_plots/illinois_predicted.png} \includegraphics[scale=0.4]{../knn_plots/illinois_actual.png}\\
 \includegraphics[scale=0.4]{../knn_plots/georgia_sanders_predicted.png} \includegraphics[scale=0.4]{../knn_plots/georgia_sanders_actual.png}\\
 
-\section*{KNN Analysis}
+\subsection{KNN Analysis}
 The model works on a macro scale for each state, correctly predicting the majority of counties. It does well for homogeneous states, or states with clear demographic boundaries. A homogenous example is Sander's overwhelming loss in Georgia, since the counties are small and similar to each other and other Southern Clinton wins. Illinois has high variance between Chicago and other counties, and Northern states split more evenly between Sanders and Clinton, so the neighbors were split as well, leading to poorer performance. 
 
-The model also worked somewhat well for Republican candidates, in particular in Idaho. Idaho's central regions voted for Trump and the periphery voted for Cruz, and the KNN model accurately captures this pattern. This is a big success for the model. 
+Some states, like Arizona, Alabama, and Florida, are complete Trump wins. The model does somewhat account for Trump's wins, but it doesn't capture the totality of his wins. The 2016 election is unusual with a rogue candidate, so traditional metrics like demography do not perform as expected in these overwhelming cases. States have many different styles of counties, so it's hard for a model to predict a 100\% Trump win. 
 
-Overall, the model works well when the training data is relatively homogenous. If a candidate has clearly won similar states, the model correctly predicts that they will win future similar states. In addition, if there are clear boundaries within a state, the model will pick up on that fact. 
+However, KNN performs better in nuanced and battleground states -- in particular in Idaho. Idaho's central regions voted for Trump and the periphery voted for Cruz, and the KNN model accurately captures this pattern. This is a big success for the model -- we predicted the central areas to have Trump tendencies, and they did. The model does a good job because the state had well-known demographic demarcations and was not as affected by Trump hysteria. 
+
+Overall, the model works well when the training data is relatively homogenous. If a candidate has clearly won similar states, the model correctly predicts that they will win future similar states. In addition, if there are clear boundaries within a state, the model will pick up on that fact. However, it does poorly with overwhelming and unusual results, which unfortunately are common in this election. \\
+
+The results confirm that a candidate can expect demographic data to be a good proxy for prediction, but the data do not make perfect predictions. The best performance is for historically strongly voting counties. Novel counties do not perform well with KNN analysis. A candidate should run KNN and canvas in doubtful areas, but not rely completely on the model. We imagine that a candidate will have a good idea of his or her performance, but wants to fine tune their strategy in battleground states like Idaho. The regression-tuned KNN model will be useful in these scenarios. 
+
+
+\section{Conclusion - Answering the Questions}
+We concluded that using even one feature could give us somewhat accurate results. We made predictions solely based on the race and household population demographics of a county. As seen in these side-by-side comparisons of our predicted election results based on a sole feature, we could obtain results that looked fairly close to the actual results. There were some counties that were vastly different, but that is expected in using only a single feature. To answer the question we initially asked, as a whole, \textbf{yes, we can conclude that race and demographic data can be used as a predictor of voting patterns.} In addition, we can use this data to predict which counties are swing counties and if we were a team working to support a specific candidate, we would invest more time and money into these counties to swing things in our favor. Although the model performs poorly with unusual scenarios (Trump), it can be useful in hard fought states. 
+
+This project could be expanded further by using multiple features, and seeing how well we could predict using only five or ten features. Due to limited time and resources, we weren’t able to do it here. Random forests (with decision stumps) is well suited to the data as well, but takes an even longer time to train. Future analysis could include a random forest algorithm running on a more powerful computer. 
 
 \newpage
 
-\section*{Final Analysis - Answering the Questions}
-We concluded that using even one feature could give us somewhat accurate results. We made predictions solely based on the race demographics of a county. As seen in these side-by-side comparisons of our predicted election results based on a sole feature, we could obtain results that looked fairly close to the actual results. There were some counties that were vastly different, but that is expected in using only a single feature. To answer the question we initially asked, as a whole, yes, we can conclude that race and demographic data can be used as a predictor of voting patterns. In addition, we can use this data to predict which counties are swing counties and if we were a team working to support a specific candidate, we would invest more time and money into these counties to swing things in our favor. 
+\section{Code Appendix}
+\subsection*{Code Structure}
+We went with an abstraction approach, modularizing parts for easy reuse. \texttt{util.R} cleans and organizes the data by joining the county data and candidate data tables, then renaming columns for human-parsable form, and attaching additional labels. This script is imported in every other file, so it was easy to change data formats because of a singular dependency. \texttt{visualizations.R} used \texttt{util.R} to make the exploratory data analysis plots. We implemented from scratch KNN in \texttt{knn.R} and exposed \texttt{knn\_pred()} with multiple arguments for other files to use. Finally, \texttt{map.R} runs the KNN in a mapping function, which can be easily switched to any state in the dataset. The flexibility in the code allows for quick changes to output without major refactoring, so this code is usable to other teams interested in the same topic. RDS files were used to avoid redundant computations. 
 
-This project could be expanded further by using multiple features, and seeing how well we could predict using only five or ten features. Due to limited time and resources, we weren’t able to do it here. 
-
-
+\subsection{util.R - Utility Functions and Data Cleaning} 
+\lstinputlisting[language=R, breaklines=true, numbers=left]{../util.R}
 \newpage
-
-\section*{Code Appendix}
-\lstinputlisting[language=R, breaklines=true]{../knn.R}
+\subsection{visualizations.R - Exploratory Data Analysis} 
+\lstinputlisting[language=R, breaklines=true, numbers=left]{../visualizations.R}
 \newpage
-\lstinputlisting[language=R, breaklines=true]{../visualizations.R}
+\subsection{knn.R - From scratch KNN Implementation (using apply!)} 
+\lstinputlisting[language=R, breaklines=true, numbers=left]{../knn.R}
 \newpage
-\lstinputlisting[language=R, breaklines=true]{../map.R}
+\subsection{map.R - Running KNN and Mapping Results} 
+\lstinputlisting[language=R, breaklines=true, numbers=left]{../map.R}
 \end{document}
