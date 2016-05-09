@@ -1,7 +1,7 @@
 % Search for all the places that say "PUT SOMETHING HERE".
 
 \documentclass[11pt]{article}
-\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate, caption, subcaption}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate, caption, subcaption, listings}
 
 \def\Name{Aniket Ketkar, Tanay Lathia, Eric Priest, Steve Wang}  % Your name
 \def\SID{24795502}  % Your student ID number
@@ -31,18 +31,31 @@
 \maketitle
 
 \section*{Abstract}
+This project involves the 2016 United States presidential primary races and the role of data in the campaign process.  The goal is to show what ways campaign teams can use election and demographic data to help them properly allocate campaign resources. We predict that through the use of linear regression, we will be able to isolate the main variables that influence voting results and use those variables to create a prediction model for future states. The prediction method we use is the K Nearest Neighbors algorithm and we believe this type of analysis would be valuable to campaign teams at all levels of United States politics.
 
 \newpage
 
 \section*{Background}
-
+For the past year, the US Presidential election has consumed the attention of the American people. While many of the publications deal with who said what, the role of data cannot be understated, as we often see polls extrapolated to predict primary results or we see actual election data made into consumer friendly visualizations. With this in mind, our group wanted to look into the different ways data could be used to predict election results and how campaign team behind the scenes could use data. Through Kaggle, we found a data set involving people’s voting patterns in the primaries by county. More specifically, for each county in each state and for each major political party, the data told us the percentage of votes and also the demographic of the people within the county, including features like percentage of each race, average number of households, and percentage of each age range. 
 \newpage
 
 \section*{Questions for Analysis}
+Using this data, we set out to answer these two primary questions:
 
+\begin{enumerate}
+	\item[$\cdot$] How can we predict the results for a certain county? 
+	\item[$\cdot$] Candidates want to canvass counties that are swing counties, or borderline in terms of votes. Using the data, can we predict which counties would be swing counties based on the features of their demographics?
+\end{enumerate}
+We chose this idea over others because we wanted to see how we could apply data and the skills we learned in class to modern day relevant issues. Obviously, no one can exactly foresee the outcomes election, but we found the idea of seeing how close we could get to be enticing.
 \newpage
 
 \section*{Methods}
+We obtained the data from Kaggle. The main data files that we used were the “primary\_results.csv” and the “county\_facts.csv” files. The “primary\_results.csv” file gave us data as to how each county voted, for both parties and the “county\_facts.csv” file gave us data as to the demographics of each county. 
+The first step we needed to take was to wrangle the data. The data came in the form of three ‘.csv’ files, one that had the election results for each county, one that had the demographic data for each county with the variables in codes, and one that had the key for the variables.  We decided to join the county demographic data frame with the election results data frame to create a large data table that had all of the relevant information we wanted to work with. We then created separate data frames for each candidate to get isolated results for each by creating subsets of the large data frame. This separation was helpful later when we ran linear regressions for the candidates.
+
+In order to find the answers to these questions, we needed to slim down which features of the demographics we wanted to analyze. It’d take far too much time to process each of these features so the most efficient method is to find the ones that impacted voting patterns the most. We ran linear regressions between each demographic variable and votes to see which variables correlated the most, and with this analysis we determined that racial variables and the average number of household members were the most influential factors. Once we found the main factors, we were able to make plots that depicted just how much influence those variables had. 
+
+We used K Nearest Neighbors in order to generate predictions based off a feature. KNN is explained more in depth in the next section, but its main purpose is as a classifier. For each state, our training data was every county in the United States minus that state, and we our testing data was every county within the state.
 
 \newpage
 
@@ -115,10 +128,21 @@ The model works on a macro scale for each state, correctly predicting the majori
 The model also worked somewhat well for Republican candidates, in particular in Idaho. Idaho's central regions voted for Trump and the periphery voted for Cruz, and the KNN model accurately captures this pattern. This is a big success for the model. 
 
 Overall, the model works well when the training data is relatively homogenous. If a candidate has clearly won similar states, the model correctly predicts that they will win future similar states. In addition, if there are clear boundaries within a state, the model will pick up on that fact. 
+
+\newpage
+
 \section*{Final Analysis - Answering the Questions}
+We concluded that using even one feature could give us somewhat accurate results. We made predictions solely based on the race demographics of a county. As seen in these side-by-side comparisons of our predicted election results based on a sole feature, we could obtain results that looked fairly close to the actual results. There were some counties that were vastly different, but that is expected in using only a single feature. To answer the question we initially asked, as a whole, yes, we can conclude that race and demographic data can be used as a predictor of voting patterns. In addition, we can use this data to predict which counties are swing counties and if we were a team working to support a specific candidate, we would invest more time and money into these counties to swing things in our favor. 
+
+This project could be expanded further by using multiple features, and seeing how well we could predict using only five or ten features. Due to limited time and resources, we weren’t able to do it here. 
+
 
 \newpage
 
 \section*{Code Appendix}
-
+\lstinputlisting[language=R, breaklines=true]{../knn.R}
+\newpage
+\lstinputlisting[language=R, breaklines=true]{../visualizations.R}
+\newpage
+\lstinputlisting[language=R, breaklines=true]{../map.R}
 \end{document}

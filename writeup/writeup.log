@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAY 2016 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  9 MAY 2016 00:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -256,6 +256,31 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count104
 \c@subtable=\count105
 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count106
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count107
+\lst@currlwidth=\dimen129
+\lst@column=\count108
+\lst@pos=\count109
+\lst@lostspace=\dimen130
+\lst@width=\dimen131
+\lst@newlines=\count110
+\lst@lineno=\count111
+\lst@maxwidth=\dimen132
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count112
+\lst@skipnumbers=\count113
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
 (./writeup.aux)
 \openout1 = `writeup.aux'.
 
@@ -314,17 +339,17 @@ LaTeX Font Info:    ... okay on input line 30.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen129
-\scratchbox=\box28
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen130
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count114
+\scratchdimen=\dimen133
+\scratchbox=\box30
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen134
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -370,7 +395,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count120
 LaTeX Font Info:    Try loading font information for U+msa on input line 31.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -382,141 +409,178 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+ [2] [3]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ò in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-<../exploratory_plots/Republican_Primary.png, id=20, 581.17125pt x 413.545pt>
+<../exploratory_plots/Republican_Primary.png, id=21, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Republican_Primary.png Graphic file (type png)
 
 <use ../exploratory_plots/Republican_Primary.png>
 Package pdftex.def Info: ../exploratory_plots/Republican_Primary.png used on in
-put line 52.
+put line 65.
 (pdftex.def)             Requested size: 232.46437pt x 165.41505pt.
 
-<../exploratory_plots/Democrat_Primary.png, id=22, 581.17125pt x 413.545pt>
+<../exploratory_plots/Democrat_Primary.png, id=23, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Democrat_Primary.png Graphic file (type png)
 
 <use ../exploratory_plots/Democrat_Primary.png>
 Package pdftex.def Info: ../exploratory_plots/Democrat_Primary.png used on inpu
-t line 53.
+t line 66.
 (pdftex.def)             Requested size: 232.46437pt x 165.41505pt.
 
-Overfull \hbox (14.60709pt too wide) in paragraph at lines 52--54
+Overfull \hbox (14.60709pt too wide) in paragraph at lines 65--67
 [][] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<../exploratory_plots/Trump_White.png, id=23, 581.17125pt x 413.545pt>
+<../exploratory_plots/Trump_White.png, id=24, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Trump_White.png Graphic file (type png)
 
 <use ../exploratory_plots/Trump_White.png>
 Package pdftex.def Info: ../exploratory_plots/Trump_White.png used on input lin
-e 57.
+e 70.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Cruz_White.png, id=24, 581.17125pt x 413.545pt>
+<../exploratory_plots/Cruz_White.png, id=25, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Cruz_White.png Graphic file (type png)
 
 <use ../exploratory_plots/Cruz_White.png>
 Package pdftex.def Info: ../exploratory_plots/Cruz_White.png used on input line
- 58.
+ 71.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Sanders_White.png, id=25, 581.17125pt x 413.545pt>
+<../exploratory_plots/Sanders_White.png, id=26, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Sanders_White.png Graphic file (type png)
 
 <use ../exploratory_plots/Sanders_White.png>
 Package pdftex.def Info: ../exploratory_plots/Sanders_White.png used on input l
-ine 59.
+ine 72.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Clinton_White.png, id=26, 581.17125pt x 413.545pt>
+<../exploratory_plots/Clinton_White.png, id=27, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Clinton_White.png Graphic file (type png)
 
 <use ../exploratory_plots/Clinton_White.png>
 Package pdftex.def Info: ../exploratory_plots/Clinton_White.png used on input l
-ine 60.
+ine 73.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--61
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
 
  []
 
 [5 <../exploratory_plots/Republican_Primary.png> <../exploratory_plots/Democrat
 _Primary.png> <../exploratory_plots/Trump_White.png> <../exploratory_plots/Cruz
 _White.png>]
-<../exploratory_plots/Trump_Num_People.png, id=34, 581.17125pt x 413.545pt>
+<../exploratory_plots/Trump_Num_People.png, id=35, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Trump_Num_People.png Graphic file (type png)
 
 <use ../exploratory_plots/Trump_Num_People.png>
 Package pdftex.def Info: ../exploratory_plots/Trump_Num_People.png used on inpu
-t line 62.
+t line 75.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Cruz_Num_People.png, id=35, 581.17125pt x 413.545pt>
+<../exploratory_plots/Cruz_Num_People.png, id=36, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Cruz_Num_People.png Graphic file (type png)
 
 <use ../exploratory_plots/Cruz_Num_People.png>
 Package pdftex.def Info: ../exploratory_plots/Cruz_Num_People.png used on input
- line 63.
+ line 76.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Sanders_Num_People.png, id=36, 581.17125pt x 413.545pt>
+<../exploratory_plots/Sanders_Num_People.png, id=37, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Sanders_Num_People.png Graphic file (type png)
 
 <use ../exploratory_plots/Sanders_Num_People.png>
 Package pdftex.def Info: ../exploratory_plots/Sanders_Num_People.png used on in
-put line 64.
+put line 77.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Clinton_Num_People.png, id=37, 581.17125pt x 413.545pt>
+<../exploratory_plots/Clinton_Num_People.png, id=38, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Clinton_Num_People.png Graphic file (type png)
 
 <use ../exploratory_plots/Clinton_Num_People.png>
 Package pdftex.def Info: ../exploratory_plots/Clinton_Num_People.png used on in
-put line 65.
+put line 78.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Trump_Age.png, id=38, 581.17125pt x 413.545pt>
+<../exploratory_plots/Trump_Age.png, id=39, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Trump_Age.png Graphic file (type png)
 
 <use ../exploratory_plots/Trump_Age.png>
 Package pdftex.def Info: ../exploratory_plots/Trump_Age.png used on input line 
-67.
+80.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Cruz_Age.png, id=39, 581.17125pt x 413.545pt>
+<../exploratory_plots/Cruz_Age.png, id=40, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Cruz_Age.png Graphic file (type png)
 
 <use ../exploratory_plots/Cruz_Age.png>
-Package pdftex.def Info: ../exploratory_plots/Cruz_Age.png used on input line 6
-8.
+Package pdftex.def Info: ../exploratory_plots/Cruz_Age.png used on input line 8
+1.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Sanders_Age.png, id=40, 581.17125pt x 413.545pt>
+<../exploratory_plots/Sanders_Age.png, id=41, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Sanders_Age.png Graphic file (type png)
 
 <use ../exploratory_plots/Sanders_Age.png>
 Package pdftex.def Info: ../exploratory_plots/Sanders_Age.png used on input lin
-e 69.
+e 82.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-<../exploratory_plots/Clinton_Age.png, id=41, 581.17125pt x 413.545pt>
+<../exploratory_plots/Clinton_Age.png, id=42, 581.17125pt x 413.545pt>
 File: ../exploratory_plots/Clinton_Age.png Graphic file (type png)
 
 <use ../exploratory_plots/Clinton_Age.png>
 Package pdftex.def Info: ../exploratory_plots/Clinton_Age.png used on input lin
-e 70.
+e 83.
 (pdftex.def)             Requested size: 220.84737pt x 157.14873pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
 
  []
 
@@ -525,101 +589,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--71
 m_People.png> <../exploratory_plots/Sanders_Num_People.png> <../exploratory_plo
 ts/Clinton_Num_People.png> <../exploratory_plots/Trump_Age.png> <../exploratory
 _plots/Cruz_Age.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 [7 <../exploratory_plots/Sanders_Age.png> <../exploratory_plots/Clinton_Age.png
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-<../knn_plots/alabama_predicted.png, id=59, 562.1pt x 704.6325pt>
+<../knn_plots/alabama_predicted.png, id=60, 562.1pt x 704.6325pt>
 File: ../knn_plots/alabama_predicted.png Graphic file (type png)
 
 <use ../knn_plots/alabama_predicted.png>
 Package pdftex.def Info: ../knn_plots/alabama_predicted.png used on input line 
-100.
+113.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/alabama_actual.png, id=60, 562.1pt x 704.6325pt>
+<../knn_plots/alabama_actual.png, id=61, 562.1pt x 704.6325pt>
 File: ../knn_plots/alabama_actual.png Graphic file (type png)
 
 <use ../knn_plots/alabama_actual.png>
-Package pdftex.def Info: ../knn_plots/alabama_actual.png used on input line 100
+Package pdftex.def Info: ../knn_plots/alabama_actual.png used on input line 113
 .
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/arizona_predicted.png, id=61, 562.1pt x 704.6325pt>
+<../knn_plots/arizona_predicted.png, id=62, 562.1pt x 704.6325pt>
 File: ../knn_plots/arizona_predicted.png Graphic file (type png)
 
 <use ../knn_plots/arizona_predicted.png>
 Package pdftex.def Info: ../knn_plots/arizona_predicted.png used on input line 
-101.
+114.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/arizona_actual.png, id=62, 562.1pt x 704.6325pt>
+<../knn_plots/arizona_actual.png, id=63, 562.1pt x 704.6325pt>
 File: ../knn_plots/arizona_actual.png Graphic file (type png)
 
 <use ../knn_plots/arizona_actual.png>
-Package pdftex.def Info: ../knn_plots/arizona_actual.png used on input line 101
+Package pdftex.def Info: ../knn_plots/arizona_actual.png used on input line 114
 .
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/florida_predicted.png, id=63, 562.1pt x 704.6325pt>
+<../knn_plots/florida_predicted.png, id=64, 562.1pt x 704.6325pt>
 File: ../knn_plots/florida_predicted.png Graphic file (type png)
 
 <use ../knn_plots/florida_predicted.png>
 Package pdftex.def Info: ../knn_plots/florida_predicted.png used on input line 
-102.
+115.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/florida_actual.png, id=64, 562.1pt x 704.6325pt>
+<../knn_plots/florida_actual.png, id=65, 562.1pt x 704.6325pt>
 File: ../knn_plots/florida_actual.png Graphic file (type png)
 
 <use ../knn_plots/florida_actual.png>
-Package pdftex.def Info: ../knn_plots/florida_actual.png used on input line 102
+Package pdftex.def Info: ../knn_plots/florida_actual.png used on input line 115
 .
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 File: ../knn_plots/alabama_predicted.png Graphic file (type png)
  <use ../knn_plots/alabama_predicted.png>
 Package pdftex.def Info: ../knn_plots/alabama_predicted.png used on input line 
-103.
+116.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 File: ../knn_plots/alabama_actual.png Graphic file (type png)
 
 <use ../knn_plots/alabama_actual.png>
-Package pdftex.def Info: ../knn_plots/alabama_actual.png used on input line 103
+Package pdftex.def Info: ../knn_plots/alabama_actual.png used on input line 116
 .
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/idaho_predicted.png, id=65, 562.1pt x 704.6325pt>
+<../knn_plots/idaho_predicted.png, id=66, 562.1pt x 704.6325pt>
 File: ../knn_plots/idaho_predicted.png Graphic file (type png)
 
 <use ../knn_plots/idaho_predicted.png>
-Package pdftex.def Info: ../knn_plots/idaho_predicted.png used on input line 10
-4.
+Package pdftex.def Info: ../knn_plots/idaho_predicted.png used on input line 11
+7.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-<../knn_plots/idaho_actual.png, id=66, 562.1pt x 704.6325pt>
+<../knn_plots/idaho_actual.png, id=67, 562.1pt x 704.6325pt>
 File: ../knn_plots/idaho_actual.png Graphic file (type png)
 
 <use ../knn_plots/idaho_actual.png>
-Package pdftex.def Info: ../knn_plots/idaho_actual.png used on input line 104.
+Package pdftex.def Info: ../knn_plots/idaho_actual.png used on input line 117.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--105
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
 
  []
 
@@ -631,15 +695,15 @@ File: ../knn_plots/illinois_predicted.png Graphic file (type png)
 
 <use ../knn_plots/illinois_predicted.png>
 Package pdftex.def Info: ../knn_plots/illinois_predicted.png used on input line
- 109.
+ 122.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
 <../knn_plots/illinois_actual.png, id=91, 562.1pt x 704.6325pt>
 File: ../knn_plots/illinois_actual.png Graphic file (type png)
 
 <use ../knn_plots/illinois_actual.png>
-Package pdftex.def Info: ../knn_plots/illinois_actual.png used on input line 10
-9.
+Package pdftex.def Info: ../knn_plots/illinois_actual.png used on input line 12
+2.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
 <../knn_plots/georgia_sanders_predicted.png, id=92, 562.1pt x 704.6325pt>
@@ -647,7 +711,7 @@ File: ../knn_plots/georgia_sanders_predicted.png Graphic file (type png)
 
 <use ../knn_plots/georgia_sanders_predicted.png>
 Package pdftex.def Info: ../knn_plots/georgia_sanders_predicted.png used on inp
-ut line 110.
+ut line 123.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
 <../knn_plots/georgia_sanders_actual.png, id=93, 562.1pt x 704.6325pt>
@@ -655,43 +719,77 @@ File: ../knn_plots/georgia_sanders_actual.png Graphic file (type png)
 
 <use ../knn_plots/georgia_sanders_actual.png>
 Package pdftex.def Info: ../knn_plots/georgia_sanders_actual.png used on input 
-line 110.
+line 123.
 (pdftex.def)             Requested size: 224.83601pt x 281.848pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
+Underfull \hbox (badness 10000) in paragraph at lines 121--124
 
  []
 
 [11 <../knn_plots/idaho_predicted.png> <../knn_plots/idaho_actual.png> <../knn_
 plots/illinois_predicted.png> <../knn_plots/illinois_actual.png>] [12 <../knn_p
 lots/georgia_sanders_predicted.png> <../knn_plots/georgia_sanders_actual.png>]
-[13] (./writeup.aux) ) 
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+[13] (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/03/04 1.5c listings language file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2014/03/04 1.5c listings language file
+) (../knn.R
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 9.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 9.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+ [14]) [15]
+(../visualizations.R [16] [17] [18]) [19] (../map.R [20]) [21] (./writeup.aux) 
+) 
 Here is how much of TeX's memory you used:
- 4568 strings out of 493117
- 70520 string characters out of 6135433
- 130500 words of memory out of 5000000
- 7944 multiletter control sequences out of 15000+600000
- 12187 words of font info for 46 fonts, out of 8000000 for 9000
+ 6725 strings out of 493117
+ 99304 string characters out of 6135433
+ 335811 words of memory out of 5000000
+ 10059 multiletter control sequences out of 15000+600000
+ 13236 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,38p,1197b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
-b>
-Output written on writeup.pdf (13 pages, 1417963 bytes).
+ 38i,6n,44p,1197b,2169s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb>
+Output written on writeup.pdf (21 pages, 1486326 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 190 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
