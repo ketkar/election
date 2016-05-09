@@ -2,7 +2,7 @@
 title: "Team Feelin' the Bern"
 author: "Aniket Ketkar, Tanay Lathia, Steve Wang, Eric Priest"
 date: "Stat 133 Final Project"
-output: beamer_presentation
+output: slidy_presentation
 ---
 
 ## Question
